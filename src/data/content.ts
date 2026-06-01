@@ -14,6 +14,7 @@ import type {
   UpcomingMatch, PastMatch, NewsItem, MerchProduct,
   PartnerData, FooterColumn,
 } from '../types'
+import { asset } from '../utils/asset'
 
 // ============================================================
 // 01 · NAV
@@ -45,7 +46,7 @@ export const VIDEO_HERO = {
   tagline: ['DESTRUINDO ADVERSÁRIOS', 'DESDE 2023'],
   scrollLabel: 'ROLE PARA CONHECER',
   fallbackImage: {
-    src: '/photos/video-hero-fallback.png',
+    src: asset('/photos/video-hero-fallback.png'),
     alt: 'Overclock Esports no palco da LAN — cinco jogadores sob holofotes, jersey preto e amarelo, olhares fixos na tela',
   },
 }
@@ -71,7 +72,7 @@ export const HERO_MAIN = {
   ctaPrimary: 'CONHEÇA O TIME',
   ctaSecondary: 'ASSISTA AO VIVO',
   frameImage: {
-    src: '/photos/hero-main-frame.png',
+    src: asset('/photos/hero-main-frame.png'),
     alt: 'Eduardo "ZEDy" Santos com AWP em posição de controle, uniforme oficial Overclock, luz dramática sobre fundo preto',
   },
 }
@@ -97,7 +98,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'BR',
     nationFlag: '🇧🇷',
     number: '07',
-    portrait: '/photos/player-portrait-brvno.png',
+    portrait: asset('/photos/player-portrait-brvno.png'),
     bio: 'A primeira bala é dele. Entry puro, sem medo de abrir sozinho — brvno entra no site antes que qualquer adversário processe o que está acontecendo. O frag-trader favorito do Brasil.',
     stats: [
       { label: 'Rating 2.0', value: '1.18' },
@@ -115,7 +116,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'FR',
     nationFlag: '🇫🇷',
     number: '01',
-    portrait: '/photos/player-portrait-xanT.png',
+    portrait: asset('/photos/player-portrait-xanT.png'),
     bio: 'Não é o que grita mais alto, é o que lê o jogo mais rápido. xanT chegou do cenário europeu com um mid-round game que transformou o Overclock em um time impossível de ler. Dois passos à frente — sempre.',
     stats: [
       { label: 'Rating 2.0', value: '1.05' },
@@ -133,7 +134,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'BR',
     nationFlag: '🇧🇷',
     number: '04',
-    portrait: '/photos/player-portrait-ZEDy.png',
+    portrait: asset('/photos/player-portrait-ZEDy.png'),
     bio: 'Um AWP na mão de ZEDy é uma sentença de morte. O AWPer de São Paulo que virou pesadelo de opponents desde os qualificatórios da CBCS — 1.24 de rating e um 4k na overtime que ainda passa em loop nos highlights.',
     stats: [
       { label: 'Rating 2.0', value: '1.24' },
@@ -151,7 +152,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'PL',
     nationFlag: '🇵🇱',
     number: '11',
-    portrait: '/photos/player-portrait-FLKR.png',
+    portrait: asset('/photos/player-portrait-FLKR.png'),
     bio: 'Consistência na forma de um rifle. FLKR veio do cenário polonês trazendo disciplina, posicionamento e uma taxa de clutch que faz a web reclamar de viés toda rodada. Silencioso nas entrevistas, devastador no servidor.',
     stats: [
       { label: 'Rating 2.0', value: '1.12' },
@@ -169,7 +170,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'BR',
     nationFlag: '🇧🇷',
     number: '09',
-    portrait: '/photos/player-portrait-nOVA.png',
+    portrait: asset('/photos/player-portrait-nOVA.png'),
     bio: 'O mais difícil de encontrar no mapa — e o último que você quer que encontre você. nOVA opera nos flancos, sabe o momento exato de aparecer e carrega o suporte silencioso que faz os outros cinco brilharem.',
     stats: [
       { label: 'Rating 2.0', value: '1.08' },
@@ -187,7 +188,7 @@ export const ROSTER_DATA: PlayerData[] = [
     nation: 'BR',
     nationFlag: '🇧🇷',
     number: '',
-    portrait: '/photos/player-portrait-SIGMA.png',
+    portrait: asset('/photos/player-portrait-SIGMA.png'),
     bio: 'Dez anos no cenário competitivo. Três como jogador, sete como analista e coach. SIGMA não grita na headset — ele prepara o time para que não precise gritar. A mente por trás de cada read que deixa o adversário sem resposta.',
     stats: [],
     isCoach: true,
@@ -206,7 +207,7 @@ export const ACHIEVEMENTS_SECTION = {
   statSubtitle: 'Em menos de dois anos de competição profissional',
   cta: 'VER HISTÓRICO COMPLETO →',
   trophyImage: {
-    src: '/photos/trophy-shot-main.png',
+    src: asset('/photos/trophy-shot-main.png'),
     alt: 'Os cinco jogadores da Overclock no palco do DreamHack São Paulo, troféu erguido, confetes pretos e amarelos preenchendo o ar',
   },
 }
@@ -219,7 +220,7 @@ export const ACHIEVEMENTS_DATA: AchievementEntry[] = [
     detail: 'Grand Final Bo5 · 3–1 contra Keyd Stars · São Paulo, BR',
     microcopy: 'Primeiro título da org. xanT e ZEDy finalistas do MVP.',
     year: '2024',
-    eventBadge: '/graphics/event-badge-1.png',
+    eventBadge: asset('/graphics/event-badge-1.png'),
   },
   {
     tournament: 'DreamHack Open São Paulo 2025',
@@ -228,7 +229,7 @@ export const ACHIEVEMENTS_DATA: AchievementEntry[] = [
     detail: 'Grand Final Bo3 · 2–0 contra NIP Academy · Arena Anhembi',
     microcopy: 'Primeiro título em LAN presencial. Piso cheio. Confetes pretos e amarelos.',
     year: '2025',
-    eventBadge: '/graphics/event-badge-2.png',
+    eventBadge: asset('/graphics/event-badge-2.png'),
   },
   {
     tournament: 'ESL Impact Latin America 2024',
@@ -237,7 +238,7 @@ export const ACHIEVEMENTS_DATA: AchievementEntry[] = [
     detail: 'Semifinal · eliminados por FURIA Academy · Bo3',
     microcopy: 'Maior classificação regional da org até então.',
     year: '2024',
-    eventBadge: '/graphics/event-badge-3.png',
+    eventBadge: asset('/graphics/event-badge-3.png'),
   },
   {
     tournament: 'IEM Road to Rio Qualifier — BR 2025',
@@ -276,16 +277,16 @@ export const MATCHES_SECTION = {
     title: 'TEMPORADA AINDA NÃO INICIADA',
     body: 'Volte quando o torneio começar.',
   },
-  ocLogoMini: '/graphics/match-oc-logo-mini.png',
+  ocLogoMini: asset('/graphics/match-oc-logo-mini.png'),
 }
 
 export const UPCOMING_MATCHES: UpcomingMatch[] = [
   {
     id: 'p1',
     opponentName: 'FURIA Academy',
-    opponentLogo: '/graphics/match-opp-logo-1.png',
+    opponentLogo: asset('/graphics/match-opp-logo-1.png'),
     eventName: 'ESL Pro League BR — Temporada 3',
-    eventLogo: '/graphics/match-event-logo-1.png',
+    eventLogo: asset('/graphics/match-event-logo-1.png'),
     format: 'Bo3',
     dateLabel: '08 JUN · 19H00 BRT',
     dateISO: '2026-06-08T19:00:00-03:00',
@@ -294,9 +295,9 @@ export const UPCOMING_MATCHES: UpcomingMatch[] = [
   {
     id: 'p2',
     opponentName: 'Sharks Esports',
-    opponentLogo: '/graphics/match-opp-logo-2.png',
+    opponentLogo: asset('/graphics/match-opp-logo-2.png'),
     eventName: 'CBCS Pro Series 2026 — Playoffs',
-    eventLogo: '/graphics/match-event-logo-2.png',
+    eventLogo: asset('/graphics/match-event-logo-2.png'),
     format: 'Bo3',
     dateLabel: '12 JUN · 21H00 BRT',
     dateISO: '2026-06-12T21:00:00-03:00',
@@ -305,7 +306,7 @@ export const UPCOMING_MATCHES: UpcomingMatch[] = [
   {
     id: 'p3',
     opponentName: '9z Team',
-    opponentLogo: '/graphics/match-opp-logo-3.png',
+    opponentLogo: asset('/graphics/match-opp-logo-3.png'),
     eventName: 'IEM Road to Rio Qualifier — Etapa 2',
     format: 'Bo5',
     dateLabel: '15 JUN · 18H00 BRT',
@@ -318,7 +319,7 @@ export const PAST_MATCHES: PastMatch[] = [
   {
     id: 'r1',
     opponentName: 'Keyd Stars',
-    opponentLogo: '/graphics/match-opp-logo-4.png',
+    opponentLogo: asset('/graphics/match-opp-logo-4.png'),
     eventName: 'CBCS Pro Series 2026',
     format: 'Bo2',
     dateLabel: '31 MAI 2026',
@@ -327,14 +328,14 @@ export const PAST_MATCHES: PastMatch[] = [
     isWin: true,
     microcopy: 'ZEDy: 4k na overtime da Nuke. Rating do match: 1.38',
     maps: [
-      { name: 'Nuke', scoreOC: 16, scoreOpp: 10, thumb: '/graphics/match-map-thumb-1.png' },
-      { name: 'Inferno', scoreOC: 16, scoreOpp: 12, thumb: '/graphics/match-map-thumb-2.png' },
+      { name: 'Nuke', scoreOC: 16, scoreOpp: 10, thumb: asset('/graphics/match-map-thumb-1.png') },
+      { name: 'Inferno', scoreOC: 16, scoreOpp: 12, thumb: asset('/graphics/match-map-thumb-2.png') },
     ],
   },
   {
     id: 'r2',
     opponentName: 'FURIA Academy',
-    opponentLogo: '/graphics/match-opp-logo-1.png',
+    opponentLogo: asset('/graphics/match-opp-logo-1.png'),
     eventName: 'ESL Pro League BR',
     format: 'Bo3',
     dateLabel: '28 MAI 2026',
@@ -351,7 +352,7 @@ export const PAST_MATCHES: PastMatch[] = [
   {
     id: 'r3',
     opponentName: 'paiN Gaming',
-    opponentLogo: '/graphics/match-opp-logo-5.png',
+    opponentLogo: asset('/graphics/match-opp-logo-5.png'),
     eventName: 'BLAST Bounty Circuit BR — Fase de Grupos',
     format: 'Bo2',
     dateLabel: '22 MAI 2026',
@@ -385,7 +386,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'AWPer brasileiro foi o diferencial no round mais tenso da série — o clipe já tem 180 mil views em menos de 24 horas.',
     date: '31 MAI 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-1.png',
+    thumbnail: asset('/photos/news-thumb-1.png'),
   },
   {
     id: 'n2',
@@ -394,7 +395,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'IGL francês assina extensão em cerimônia na sede da organização em São Paulo. "Essa ainda não é a melhor versão desse time," diz o capitão.',
     date: '26 MAI 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-2.png',
+    thumbnail: asset('/photos/news-thumb-2.png'),
   },
   {
     id: 'n3',
@@ -403,7 +404,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'Bastidores do bootcamp de São Paulo: câmeras no vestiário, análise de demo às 2h da manhã e a rotina que ninguém vê.',
     date: '20 MAI 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-3.png',
+    thumbnail: asset('/photos/news-thumb-3.png'),
   },
   {
     id: 'n4',
@@ -412,7 +413,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'Análise de mappool, tendências recentes e por que esse Bo3 pode decidir quem termina no top 2 da temporada regular.',
     date: '06 JUN 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-4.png',
+    thumbnail: asset('/photos/news-thumb-4.png'),
   },
   {
     id: 'n5',
@@ -421,7 +422,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'Entrevista exclusiva com o entry fragger da Overclock — sobre pressão, estilo de jogo e a diferença entre coragem e impulsividade no CS competitivo.',
     date: '15 MAI 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-5.png',
+    thumbnail: asset('/photos/news-thumb-5.png'),
   },
   {
     id: 'n6',
@@ -430,7 +431,7 @@ export const NEWS_DATA: NewsItem[] = [
     excerpt: 'A câmera foi junto do primeiro ao último round. Viagem, concentração, derrota e a conversa no hall do hotel que redefiniu o grupo.',
     date: '10 MAI 2026',
     href: '#',
-    thumbnail: '/photos/news-thumb-6.png',
+    thumbnail: asset('/photos/news-thumb-6.png'),
   },
 ]
 
@@ -447,7 +448,7 @@ export const MERCH_SECTION = {
   ctaMicrocopy: 'Entrega nacional · Troca garantida em 30 dias',
   ctaHref: '#',
   heroImage: {
-    src: '/photos/merch-hero-img.png',
+    src: asset('/photos/merch-hero-img.png'),
     alt: 'Jersey oficial Overclock 2026 em modelo masculino, fundo escuro, luz lateral revelando texture do tecido e bordado do logo no peito',
   },
 }
@@ -458,7 +459,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: 'JERSEY OFICIAL OVERCLOCK 2026',
     description: 'Tecido performance dry-fit, silk da organização na frente, número do jersey costurado no dorso.',
     price: 'R$ 249,90',
-    image: '/photos/merch-product-jersey.png',
+    image: asset('/photos/merch-product-jersey.png'),
     badge: 'LANÇAMENTO',
   },
   {
@@ -466,21 +467,21 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: 'HOODIE OVERCLOCK ESSENTIAL',
     description: 'Fleece pesado 320g. Logo bordado em relevo. Bolso canguru com zíper interno para headset.',
     price: 'R$ 189,90',
-    image: '/photos/merch-product-hoodie.png',
+    image: asset('/photos/merch-product-hoodie.png'),
   },
   {
     id: 'cap',
     name: 'CAP SNAPBACK LOGO SERIES',
     description: 'Aba reta, ajuste traseiro snapback, bordado em 3D do logo da organização.',
     price: 'R$ 79,90',
-    image: '/photos/merch-product-cap.png',
+    image: asset('/photos/merch-product-cap.png'),
   },
   {
     id: 'mousepad',
     name: 'MOUSEPAD XL TEAM EDITION',
     description: '900×400mm, base antiderrapante, superfície texturizada para controle de mouse. Arte exclusiva do roster 2026.',
     price: 'R$ 129,90',
-    image: '/photos/merch-product-mousepad.png',
+    image: asset('/photos/merch-product-mousepad.png'),
     badge: 'MAIS VENDIDO',
   },
 ]
@@ -499,14 +500,14 @@ export const PARTNERS_SECTION = {
 }
 
 export const PARTNERS_DATA: PartnerData[] = [
-  { id: 'p1', name: 'NexForce', logo: '/graphics/partner-logo-1.png' },
-  { id: 'p2', name: 'VoltRush', logo: '/graphics/partner-logo-2.png' },
-  { id: 'p3', name: 'Kinetica', logo: '/graphics/partner-logo-3.png' },
-  { id: 'p4', name: 'CloudSync', logo: '/graphics/partner-logo-4.png' },
-  { id: 'p5', name: 'GrindWear', logo: '/graphics/partner-logo-5.png' },
-  { id: 'p6', name: 'PitStop BR', logo: '/graphics/partner-logo-6.png' },
-  { id: 'p7', name: 'DeepFrag', logo: '/graphics/partner-logo-7.png' },
-  { id: 'p8', name: 'Axiom Bank', logo: '/graphics/partner-logo-8.png' },
+  { id: 'p1', name: 'NexForce', logo: asset('/graphics/partner-logo-1.png') },
+  { id: 'p2', name: 'VoltRush', logo: asset('/graphics/partner-logo-2.png') },
+  { id: 'p3', name: 'Kinetica', logo: asset('/graphics/partner-logo-3.png') },
+  { id: 'p4', name: 'CloudSync', logo: asset('/graphics/partner-logo-4.png') },
+  { id: 'p5', name: 'GrindWear', logo: asset('/graphics/partner-logo-5.png') },
+  { id: 'p6', name: 'PitStop BR', logo: asset('/graphics/partner-logo-6.png') },
+  { id: 'p7', name: 'DeepFrag', logo: asset('/graphics/partner-logo-7.png') },
+  { id: 'p8', name: 'Axiom Bank', logo: asset('/graphics/partner-logo-8.png') },
 ]
 
 // ============================================================
@@ -517,7 +518,7 @@ export const RECRUITMENT_SECTION = {
   eyebrow: 'FAÇA PARTE',
   title: ['QUER JOGAR COM', 'OS MELHORES?'],
   bgImage: {
-    src: '/photos/recruitment-bg.png',
+    src: asset('/photos/recruitment-bg.png'),
     alt: 'Sala de bootcamp Overclock — telas, teclados, intensidade competitiva',
   },
   contact: 'Fale com a gente: esports@overclock.gg',
