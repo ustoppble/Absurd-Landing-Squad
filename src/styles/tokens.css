@@ -1,0 +1,167 @@
+/* ============================================================
+   OVERCLOCK CS — DESIGN TOKENS
+   Derivados do DNA visual vitality.gg · 2026-06-01
+   Acento único: #FFFF00 · Radius: 0px · Borda dashed #41413B
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     CORES — Backgrounds
+  ---------------------------------------------------------- */
+  --color-bg-page:           #000000;
+  --color-bg-hero-start:     #1A1A0F;
+  --color-bg-hero-mid:       #0D0D0A;
+  --color-bg-hero-end:       #141410;
+  --color-bg-hero-gradient:  linear-gradient(135deg, #1A1A0F 0%, #0D0D0A 50%, #141410 100%);
+  --color-bg-surface:        #121212;
+  --color-bg-video-inner:    #0A0A0A;
+  --color-bg-header:         #FFFFFF;
+  --color-bg-match-upcoming: #FFFDFD;
+  --color-bg-match-past:     #F9FAFB;
+
+  /* ----------------------------------------------------------
+     CORES — Acento (ÚNICO — só amarelo)
+  ---------------------------------------------------------- */
+  --color-accent:            #FFFF00;
+  --color-accent-alt:        #FEFF00;
+  --color-accent-dim:        #FAE100;
+  --color-accent-fill-hover: rgba(255, 255, 0, 0.10);
+  --color-accent-glow-right: radial-gradient(ellipse at center, rgba(120, 140, 20, 0.49) 0%, transparent 55%);
+  --color-accent-glow-left:  radial-gradient(ellipse at center, rgba(100, 120, 20, 0.08) 0%, transparent 70%);
+
+  /* ----------------------------------------------------------
+     CORES — Texto
+  ---------------------------------------------------------- */
+  --color-text-primary:      #FFFFFF;
+  --color-text-muted:        #888888;
+  --color-text-muted-title:  rgba(255, 255, 255, 0.5);
+  --color-text-on-light:     #000000;
+  --color-text-near-black:   rgb(40, 40, 40);
+  --color-text-body-dark:    rgb(0, 0, 0);
+
+  /* ----------------------------------------------------------
+     CORES — Bordas
+  ---------------------------------------------------------- */
+  --color-border-dashed:     #41413B;
+  --color-border-header:     #D2D5D9;
+  --color-border-match-card: #FEFF00;
+
+  /* ----------------------------------------------------------
+     BORDAS — Tokens compostos (assinatura visual)
+  ---------------------------------------------------------- */
+  --border-signature:        1px dashed #41413B;
+  --border-match:            1px solid #FEFF00;
+  --border-header:           1px solid #D2D5D9;
+  --border-corner-accent:    2px solid #FFFF00;
+  --border-button:           1px dashed #41413B;
+
+  /* ----------------------------------------------------------
+     RADIUS — 0px everywhere (filosofia sharp)
+  ---------------------------------------------------------- */
+  --radius-none:             0px;
+  --radius-default:          0px;
+  --radius-card:             0px;
+  --radius-button:           0px;
+  --radius-video-inner:      2px;
+  --radius-dot:              50%;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Font Stacks
+  ---------------------------------------------------------- */
+  --font-display:    'Base Neue', 'Arial Narrow', 'Arial', sans-serif;
+  --font-heading:    'Instrument Sans', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+  --font-body:       'Raleway', 'Gill Sans', 'Gill Sans MT', 'Segoe UI', sans-serif;
+  --font-ui:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Escala
+  ---------------------------------------------------------- */
+  --font-size-hero-display:          clamp(40px, 12vw, 160px);
+  --font-size-hero-display-vertical: clamp(80px, 15vw, 160px);
+  --font-size-hero-display-mobile:   clamp(30px, 10vw, 70px);
+  --font-size-section-xl:            clamp(60px, 10vw, 120px);
+  --font-size-section-lg:            clamp(40px, 6vw, 70px);
+  --font-size-section-match:         clamp(24px, 8vw, 60px);
+  --font-size-body:                  16px;
+  --font-size-body-sm:               13px;
+  --font-size-nav:                   14px;
+  --font-size-button:                14px;
+  --font-size-cta:                   11px;
+  --font-size-badge:                 12px;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Pesos e estilo
+  ---------------------------------------------------------- */
+  --font-weight-display:    800;
+  --letter-spacing-display: 3px;
+  --letter-spacing-cta:     2px;
+  --letter-spacing-badge:   1px;
+  --line-height-display:    0.95;
+  --line-height-body:       1.6;
+  --line-height-tight:      1.2;
+
+  /* ----------------------------------------------------------
+     ESPAÇAMENTO
+  ---------------------------------------------------------- */
+  --spacing-container-padding-desktop: 40px;
+  --spacing-container-padding-mobile:  20px;
+  --spacing-section-top-lg:            150px;
+  --spacing-section-top-md:            80px;
+  --spacing-section-bottom-lg:         100px;
+  --spacing-hero-gap:                  60px;
+  --spacing-news-gap:                  30px;
+  --spacing-news-masonry-offset:       80px;
+  --spacing-card-content-gap:          16px;
+  --spacing-card-inner-gap:            12px;
+  --spacing-button-padding:            18px 32px;
+  --spacing-button-padding-mobile:     14px 24px;
+  --spacing-corner-accent:             20px;
+
+  /* ----------------------------------------------------------
+     LAYOUT
+  ---------------------------------------------------------- */
+  --container-max-width:      1400px;
+
+  /* ----------------------------------------------------------
+     LOGO STRIP
+  ---------------------------------------------------------- */
+  --logo-item-width-desktop:  180px;
+  --logo-item-height-desktop: 110px;
+  --logo-item-width-mobile:   140px;
+  --logo-item-height-mobile:  80px;
+  --logo-scroll-duration:     30s;
+
+  /* ----------------------------------------------------------
+     SOMBRAS
+  ---------------------------------------------------------- */
+  --shadow-button-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* ----------------------------------------------------------
+     Z-INDEX
+  ---------------------------------------------------------- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+
+  /* ----------------------------------------------------------
+     MOTION
+  ---------------------------------------------------------- */
+  --duration-fast:    0.1s;
+  --duration-default: 0.25s;
+  --duration-medium:  0.3s;
+  --duration-slow:    0.4s;
+  --easing-default:   ease;
+
+  /* ----------------------------------------------------------
+     EFEITOS ESPECIAIS
+  ---------------------------------------------------------- */
+  --noise-opacity:        0.03;
+  --corner-accent-size:   20px;
+  --corner-accent-border: 2px solid #FFFF00;
+  --logo-filter-white:    brightness(0) invert(1);
+
+}

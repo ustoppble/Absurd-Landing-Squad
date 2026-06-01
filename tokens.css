@@ -1,0 +1,247 @@
+/* ============================================================
+   OVERCLOCK CS — DESIGN TOKENS
+   Derivados do DNA visual vitality.gg · 2026-06-01
+   Acento único: #FFFF00 · Radius: 0px · Borda dashed #41413B
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     CORES — Backgrounds
+  ---------------------------------------------------------- */
+  --color-bg-page:           #000000;
+  --color-bg-hero-start:     #1A1A0F;
+  --color-bg-hero-mid:       #0D0D0A;
+  --color-bg-hero-end:       #141410;
+  --color-bg-hero-gradient:  linear-gradient(135deg, #1A1A0F 0%, #0D0D0A 50%, #141410 100%);
+  --color-bg-surface:        #121212;
+  --color-bg-video-inner:    #0A0A0A;
+  --color-bg-header:         #FFFFFF;
+  --color-bg-match-upcoming: #FFFDFD;
+  --color-bg-match-past:     #F9FAFB;
+
+  /* ----------------------------------------------------------
+     CORES — Acento (ÚNICO — só amarelo)
+  ---------------------------------------------------------- */
+  --color-accent:            #FFFF00;
+  --color-accent-alt:        #FEFF00;
+  --color-accent-dim:        #FAE100;
+  --color-accent-fill-hover: rgba(255, 255, 0, 0.10);
+  --color-accent-glow-right: radial-gradient(ellipse at center, rgba(120, 140, 20, 0.49) 0%, transparent 55%);
+  --color-accent-glow-left:  radial-gradient(ellipse at center, rgba(100, 120, 20, 0.08) 0%, transparent 70%);
+
+  /* ----------------------------------------------------------
+     CORES — Texto
+  ---------------------------------------------------------- */
+  --color-text-primary:      #FFFFFF;
+  --color-text-muted:        #888888;
+  --color-text-muted-title:  rgba(255, 255, 255, 0.5);
+  --color-text-on-light:     #000000;
+  --color-text-near-black:   rgb(40, 40, 40);
+  --color-text-body-dark:    rgb(0, 0, 0);
+
+  /* ----------------------------------------------------------
+     CORES — Bordas
+  ---------------------------------------------------------- */
+  --color-border-dashed:     #41413B;
+  --color-border-header:     #D2D5D9;
+  --color-border-match-card: #FEFF00;
+  --color-border-placeholder: rgb(210, 213, 217);
+
+  /* ----------------------------------------------------------
+     CORES — Sistema (feedback)
+  ---------------------------------------------------------- */
+  --color-system-error:      #D72C0D;
+  --color-system-success:    #008060;
+  --color-system-focus:      #87ADF5;
+  --color-system-shadow-mint: rgb(168, 232, 226);
+
+  /* ----------------------------------------------------------
+     BORDAS — Tokens compostos (assinatura visual)
+  ---------------------------------------------------------- */
+  --border-signature:        1px dashed #41413B;
+  --border-match:            1px solid #FEFF00;
+  --border-header:           1px solid #D2D5D9;
+  --border-corner-accent:    2px solid #FFFF00;
+  --border-button:           1px dashed #41413B;
+
+  /* ----------------------------------------------------------
+     RADIUS — 0px everywhere (filosofia sharp)
+  ---------------------------------------------------------- */
+  --radius-none:             0px;
+  --radius-default:          0px;
+  --radius-card:             0px;
+  --radius-button:           0px;
+  --radius-video-inner:      2px;   /* exceção técnica: inner frame */
+  --radius-dot:              50%;   /* badge dot */
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Font Stacks
+  ---------------------------------------------------------- */
+  --font-display:    'Base Neue', 'Arial Narrow', 'Arial', sans-serif;
+  --font-heading:    'Instrument Sans', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+  --font-body:       'Raleway', 'Gill Sans', 'Gill Sans MT', 'Segoe UI', sans-serif;
+  --font-ui:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Escala
+  ---------------------------------------------------------- */
+  /* Display / Hero */
+  --font-size-hero-display:         clamp(40px, 12vw, 160px);
+  --font-size-hero-display-vertical: clamp(80px, 15vw, 160px);
+  --font-size-hero-display-mobile:  clamp(30px, 10vw, 70px);
+
+  /* Section titles */
+  --font-size-section-xl:   clamp(60px, 10vw, 120px);
+  --font-size-section-lg:   clamp(40px, 6vw, 70px);
+  --font-size-section-match: clamp(24px, 8vw, 60px);
+
+  /* UI / Body */
+  --font-size-body:         16px;
+  --font-size-body-sm:      13px;
+  --font-size-nav:          14px;
+  --font-size-button:       14px;
+  --font-size-cta:          11px;
+  --font-size-badge:        12px;
+  --font-size-label:        11px;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Pesos
+  ---------------------------------------------------------- */
+  --font-weight-display:    800;
+  --font-weight-heading:    700;
+  --font-weight-semibold:   600;
+  --font-weight-medium:     500;
+  --font-weight-normal:     400;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Estilo e espaçamento
+  ---------------------------------------------------------- */
+  --letter-spacing-display: 3px;
+  --letter-spacing-cta:     2px;
+  --letter-spacing-badge:   1px;
+  --letter-spacing-none:    0px;
+
+  --line-height-display:    0.95;
+  --line-height-body:       1.6;
+  --line-height-tight:      1.2;
+  --line-height-normal:     1.5;
+
+  --text-transform-display: uppercase;
+  --text-transform-cta:     uppercase;
+  --text-transform-card:    uppercase;
+
+  /* ----------------------------------------------------------
+     ESPAÇAMENTO — Scale (base 8pt grid)
+  ---------------------------------------------------------- */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-15:  60px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-30:  120px;
+  --space-38:  150px;
+
+  /* ----------------------------------------------------------
+     ESPAÇAMENTO — Semântico
+  ---------------------------------------------------------- */
+  --spacing-container-padding-desktop: 40px;
+  --spacing-container-padding-mobile:  20px;
+  --spacing-section-top-lg:            150px;
+  --spacing-section-top-md:            80px;
+  --spacing-section-bottom-lg:         100px;
+  --spacing-section-bottom-md:         80px;
+  --spacing-hero-gap:                  60px;
+  --spacing-hero-content-gap:          24px;
+  --spacing-news-gap:                  30px;
+  --spacing-news-masonry-offset:       80px;
+  --spacing-news-title-mb:             60px;
+  --spacing-slider-header-mb:          40px;
+  --spacing-card-content-gap:          16px;
+  --spacing-card-inner-gap:            12px;
+  --spacing-button-padding:            18px 32px;
+  --spacing-button-padding-mobile:     14px 24px;
+  --spacing-header-padding:            12px;
+  --spacing-corner-accent:             20px;
+
+  /* ----------------------------------------------------------
+     LAYOUT — Container e Grid
+  ---------------------------------------------------------- */
+  --container-max-width:   1400px;
+  --grid-hero-cols:        1fr 1fr;
+  --grid-hero-gap:         60px;
+  --grid-news-cols:        repeat(3, 1fr);
+  --grid-news-gap:         30px;
+
+  /* ----------------------------------------------------------
+     BREAKPOINTS (referência — usar em media queries)
+  ---------------------------------------------------------- */
+  --bp-xs:    480px;
+  --bp-sm:    749px;
+  --bp-md:    768px;
+  --bp-lg:    989px;
+  --bp-xl:    1024px;
+  --bp-2xl:   1199px;
+  --bp-max:   1400px;
+
+  /* ----------------------------------------------------------
+     LOGO STRIP — Componente
+  ---------------------------------------------------------- */
+  --logo-item-width-desktop:  180px;
+  --logo-item-height-desktop: 110px;
+  --logo-item-width-mobile:   140px;
+  --logo-item-height-mobile:  80px;
+  --logo-scroll-duration:     30s;
+
+  /* ----------------------------------------------------------
+     SOMBRAS — Mínimas (filosofia flat)
+  ---------------------------------------------------------- */
+  --shadow-none:         none;
+  --shadow-button-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* ----------------------------------------------------------
+     Z-INDEX — Escala
+  ---------------------------------------------------------- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ----------------------------------------------------------
+     MOTION — Durações e Easings
+  ---------------------------------------------------------- */
+  --duration-fast:    0.1s;
+  --duration-default: 0.25s;
+  --duration-medium:  0.3s;
+  --duration-slow:    0.4s;
+  --duration-long:    0.5s;
+  --duration-animate: 1.0s;
+  --duration-logo:    30s;
+
+  --easing-default:   ease;
+  --easing-in:        ease-in;
+  --easing-out:       ease-out;
+  --easing-linear:    linear;
+
+  /* ----------------------------------------------------------
+     EFEITOS ESPECIAIS — Noise e Glows
+  ---------------------------------------------------------- */
+  --noise-opacity:          0.03;
+  --corner-accent-size:     20px;
+  --corner-accent-border:   2px solid #FFFF00;
+  --logo-filter-white:      brightness(0) invert(1);
+  --font-smoothing:         antialiased;
+
+}

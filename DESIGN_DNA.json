@@ -1,0 +1,310 @@
+{
+  "_meta": {
+    "source": "https://vitality.gg/",
+    "extracted": "2026-06-01",
+    "method": "HTML/CSS direct extraction via curl — no Bright Data required",
+    "platform": "Shopify (custom theme 'Base' v79, template ID 28471644127571)",
+    "confidence": "high — values extracted from actual CSS custom properties, @font-face declarations, and inline styles"
+  },
+
+  "palette": {
+    "_note": "All values extracted from CSS :root blocks, section-specific style blocks, and inline color declarations",
+    "primary": {
+      "accent": "#FFFF00",
+      "accent_alt": "#FEFF00",
+      "accent_dim": "#FAE100",
+      "usage": "CTA buttons, highlights, corner accents, play icon, badge dot, title emphasis, review stars, match card borders"
+    },
+    "backgrounds": {
+      "page_dark": "#000000",
+      "hero_gradient_start": "#1A1A0F",
+      "hero_gradient_mid": "#0D0D0A",
+      "hero_gradient_end": "#141410",
+      "hero_gradient_css": "linear-gradient(135deg, #1a1a0f 0%, #0d0d0a 50%, #141410 100%)",
+      "video_inner": "#0A0A0A",
+      "header_bg": "#FFFFFF",
+      "match_card_upcoming": "#FFFDFD",
+      "match_card_past": "#F9FAFB",
+      "dark_surface": "#121212"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "primary_rgb": "255, 255, 255",
+      "muted": "#888888",
+      "muted_title": "rgba(255, 255, 255, 0.5)",
+      "on_light": "#000000",
+      "near_black": "rgb(40, 40, 40)",
+      "body_dark": "rgb(0, 0, 0)"
+    },
+    "borders": {
+      "dashed_dark": "#41413B",
+      "header_border": "#D2D5D9",
+      "match_card": "#FEFF00",
+      "placeholder": "rgb(210, 213, 217)"
+    },
+    "system": {
+      "sale_red": "#D72C0D",
+      "success_green": "#008060",
+      "keyboard_focus": "#87ADF5",
+      "shadow_mint": "rgb(168, 232, 226)"
+    },
+    "glow_effects": {
+      "right_glow": "radial-gradient(ellipse at center, rgba(120, 140, 20, 0.49) 0%, transparent 55%)",
+      "left_glow": "radial-gradient(ellipse at center, rgba(100, 120, 20, 0.08) 0%, transparent 70%)"
+    }
+  },
+
+  "typography": {
+    "_note": "Font families extracted from @font-face declarations and CSS custom properties in :root",
+    "fonts": {
+      "display": {
+        "family": "'Base Neue'",
+        "variant": "Super Condensed (SuperCond)",
+        "source": "self-hosted on vitality.gg CDN",
+        "weights_available": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        "fallback": "sans-serif",
+        "usage": "All hero titles, section headings, match calendar title, news section title"
+      },
+      "heading_ui": {
+        "family": "\"Instrument Sans\"",
+        "source": "self-hosted on vitality.gg CDN",
+        "weights_available": [600, 700],
+        "fallback": "sans-serif",
+        "css_var": "--font-heading-family",
+        "usage": "Navigation, buttons, price labels, UI headings"
+      },
+      "body": {
+        "family": "Raleway",
+        "source": "self-hosted on vitality.gg CDN",
+        "weights_available": [400, 600],
+        "styles": ["normal", "italic"],
+        "fallback": "sans-serif",
+        "css_var": "--font-body-family",
+        "usage": "Body text, general copy"
+      },
+      "body_ui": {
+        "family": "'Inter'",
+        "stack": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "source": "system/web-safe fallback stack",
+        "usage": "Card titles, excerpts, CTA labels, badge text, body content in custom sections"
+      }
+    },
+    "scale": {
+      "hero_display": "clamp(40px, 12vw, 160px)",
+      "hero_display_vertical": "clamp(80px, 15vw, 160px)",
+      "hero_display_mobile": "clamp(30px, 10vw, 70px)",
+      "section_title_large": "clamp(60px, 10vw, 120px)",
+      "section_title_medium": "clamp(40px, 6vw, 70px)",
+      "match_title": "60px (clamp(24px, 8vw, 60px) mobile)",
+      "body": "16px",
+      "body_small": "13px",
+      "label_badge": "12px",
+      "cta_button": "11px",
+      "nav": "14px",
+      "link": "1.4rem",
+      "field_input": "1.3rem",
+      "h1_shopify": "calc(var(--font-heading-scale) * 4rem)",
+      "h2_shopify": "calc(var(--font-heading-scale) * 2.8rem)"
+    },
+    "styles": {
+      "display_font_weight": 800,
+      "display_letter_spacing": "3px",
+      "display_line_height": 0.95,
+      "display_transform": "uppercase",
+      "heading_font_weight": 700,
+      "nav_font_weight": 400,
+      "nav_font_size": "14px",
+      "button_font_size": "14px",
+      "cta_letter_spacing": "2px",
+      "badge_letter_spacing": "1px",
+      "body_line_height": 1.6,
+      "body_font_weight": 400,
+      "card_title_transform": "uppercase",
+      "font_smoothing": "antialiased"
+    }
+  },
+
+  "spacing": {
+    "_note": "Extracted from section padding, gap, and margin declarations in CSS",
+    "container_max_width": "1400px",
+    "container_padding_desktop": "40px",
+    "container_padding_mobile": "20px",
+    "section_padding_top_large": "150px",
+    "section_padding_top_medium": "80px",
+    "section_padding_bottom_large": "100px",
+    "section_padding_bottom_medium": "80px",
+    "hero_column_gap": "60px",
+    "hero_content_gap": "24px",
+    "hero_description_margin": "8px 0 16px 0",
+    "news_grid_gap": "30px",
+    "news_masonry_offset": "80px",
+    "news_title_margin_bottom": "60px",
+    "slider_header_margin_bottom": "40px",
+    "card_content_gap": "16px",
+    "card_inner_gap": "12px",
+    "logo_item_width": "180px",
+    "logo_item_height": "110px",
+    "logo_item_height_mobile": "80px",
+    "logo_item_width_mobile": "140px",
+    "button_padding": "18px 32px",
+    "button_padding_mobile": "14px 24px",
+    "header_padding": "12px",
+    "header_logo_height_desktop": "50px",
+    "header_logo_height_mobile": "44px",
+    "corner_accent_size": "20px",
+    "spacing_sections_desktop": "0px",
+    "spacing_sections_mobile": "0px"
+  },
+
+  "radius": {
+    "_note": "Extracted from CSS — sharp/angular design philosophy",
+    "default": "0px",
+    "card": "0px",
+    "button": "0px",
+    "button_shopify_system": "4px",
+    "video_inner": "2px",
+    "badge_dot": "50%",
+    "philosophy": "sharp edges — zero radius is the signature aesthetic"
+  },
+
+  "shadows": {
+    "_note": "Minimal shadow usage — flat design philosophy",
+    "button_hover": "0 4px 12px rgba(0, 0, 0, 0.15)",
+    "shadow_opacity_var": "0.3",
+    "philosophy": "Virtually shadow-free — depth created through contrast and color, not shadows"
+  },
+
+  "borders": {
+    "_note": "Dashed borders are a signature visual element throughout the site",
+    "primary_style": "1px dashed #41413B",
+    "match_card": "1px solid #FEFF00",
+    "header": "1px solid #D2D5D9",
+    "corner_accent": "2px solid #FFFF00",
+    "button_border_width": "1px",
+    "signature_pattern": "dashed borders on containers, buttons, logo items, video frames"
+  },
+
+  "layout": {
+    "_note": "Extracted from grid, flexbox, and container declarations",
+    "grid_hero": "grid-template-columns: 1fr 1fr; gap: 60px",
+    "grid_news": "grid-template-columns: repeat(3, 1fr); gap: 30px",
+    "grid_hero_collapse": "1fr at ≤1024px",
+    "container_pattern": "max-width: 1400px; margin: 0 auto; padding: 0 40px",
+    "breakpoints": {
+      "mobile_small": "480px",
+      "mobile": "749px",
+      "tablet": "768px",
+      "desktop_medium": "989px",
+      "desktop": "1024px",
+      "desktop_large": "1199px",
+      "container_max": "1400px"
+    },
+    "page_width_shopify": "160rem",
+    "overflow_x": "hidden on body",
+    "section_flow": "continuous — no gaps between sections"
+  },
+
+  "motion": {
+    "_note": "Extracted from animation, transition, and keyframe declarations",
+    "duration_short": "0.1s",
+    "duration_default": "0.25s",
+    "duration_long": "0.5s",
+    "duration_animate": "1.0s",
+    "easing_default": "ease",
+    "animations": {
+      "logo_scroll": {
+        "keyframe": "translateX(0) → translateX(-25%)",
+        "duration": "30s",
+        "timing": "linear infinite",
+        "pause_on_hover": true
+      },
+      "image_hover_zoom": {
+        "transform": "scale(1.05)",
+        "duration": "0.4s ease"
+      },
+      "button_fill_hover": {
+        "property": "background-color",
+        "value": "rgba(255, 255, 0, 0.1)",
+        "duration": "0.3s ease"
+      },
+      "arrow_slide_hover": {
+        "transform": "translateX(4px)",
+        "duration": "0.3s ease"
+      },
+      "play_button_hover": {
+        "transform": "scale(1.1) (with translate preserved)",
+        "duration": "0.3s ease"
+      },
+      "cta_underline": {
+        "description": "pseudo-element ::before/::after scaleX(0→1) on hover — CTA button accent bar",
+        "css_class": ".button--cta"
+      }
+    }
+  },
+
+  "special_effects": {
+    "noise_texture": {
+      "description": "SVG feTurbulence fractalNoise overlay — paper/grain texture",
+      "implementation": "background-image: url(data:image/svg+xml - SVG with feTurbulence filter)",
+      "base_frequency": 0.85,
+      "num_octaves": 4,
+      "opacity": 0.03,
+      "usage": "All dark hero sections and collection slider"
+    },
+    "corner_accent": {
+      "description": "4-corner L-shaped accent in yellow on premium content frames",
+      "implementation": "::before/::after pseudo-elements, 20×20px, border-top+border-left/right/bottom 2px solid #FFFF00",
+      "usage": "Video frames in hero sections"
+    },
+    "radial_glow": {
+      "right": "radial-gradient(ellipse at center, rgba(120, 140, 20, 0.49) 0%, transparent 55%) — wide, right side, 200% height",
+      "left": "radial-gradient(ellipse at center, rgba(100, 120, 20, 0.08) 0%, transparent 70%) — subtle, bottom-left",
+      "color_note": "Olive-yellow (#789014 approx) — derived from accent #FFFF00"
+    },
+    "logo_invert": {
+      "description": "Partner logos rendered white via CSS filter",
+      "css": "filter: brightness(0) invert(1)"
+    },
+    "font_smoothing": {
+      "webkit": "-webkit-font-smoothing: antialiased",
+      "moz": "-moz-osx-font-smoothing: grayscale"
+    }
+  },
+
+  "component_patterns": {
+    "buttons": {
+      "primary": "background: transparent; border: 1px dashed #41413B; color: #FFFF00; border-radius: 0; padding: 18px 32px; font: Inter 11px/500 uppercase; letter-spacing: 2px",
+      "secondary": "same as primary but color: #FFFFFF",
+      "hover_primary": "background: rgba(255,255,0,0.1)",
+      "hover_secondary": "background: rgba(255,255,255,0.1)"
+    },
+    "cards": {
+      "border_radius": "0px",
+      "shadow": "none",
+      "image_aspect_ratio": "16/10",
+      "image_hover": "scale(1.05) 0.4s ease",
+      "title_style": "Inter 16px weight-700 uppercase #FFFFFF",
+      "excerpt_style": "Inter 13px weight-400 #888888 2-line clamp"
+    },
+    "match_cards": {
+      "upcoming": "background: #FFFDFD; border: 1px solid #FEFF00; text: #000000",
+      "past": "background: #F9FAFB; border: 1px solid #FEFF00; text: #000000",
+      "note": "Light cards on black background — deliberate contrast inversion"
+    },
+    "logo_strip": {
+      "item_size": "180×110px desktop, 140×80px mobile",
+      "border": "1px dashed #41413B with -1px margin overlap",
+      "logo_filter": "brightness(0) invert(1)",
+      "animation": "logoScroll 30s linear infinite, pause on hover"
+    },
+    "video_frame": {
+      "aspect_ratio": "16/10",
+      "max_width": "600px",
+      "border": "1px dashed #41413B",
+      "corner_accents": "20px L-shaped 2px solid #FFFF00",
+      "inner_bg": "#0A0A0A",
+      "inner_radius": "2px",
+      "play_icon": "CSS triangle border-left: 28px solid #FFFF00"
+    }
+  }
+}
