@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["'Base Neue'", "'Arial Narrow'", 'Arial', 'sans-serif'],
+        display: ["'Bebas Neue'", "'Arial Narrow'", 'Arial', 'sans-serif'],
         heading: ["'Instrument Sans'", "'Trebuchet MS'", "'Helvetica Neue'", 'sans-serif'],
         body: ["'Raleway'", "'Gill Sans'", "'Gill Sans MT'", "'Segoe UI'", 'sans-serif'],
         ui: ["'Inter'", '-apple-system', 'BlinkMacSystemFont', "'Segoe UI'", 'Roboto', 'sans-serif'],
