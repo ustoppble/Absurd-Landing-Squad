@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { OverclockLogo } from '../base/OverclockLogo'
 import { NoiseOverlay } from '../base/NoiseOverlay'
 import { VIDEO_HERO } from '../../data/content'
 
@@ -82,17 +81,6 @@ export function VideoHero() {
 
       {/* Content — staggered entrance */}
       <div className="relative z-[10] h-full flex flex-col items-center justify-center gap-6 text-center px-5">
-        {/* Logo */}
-        <div
-          style={{
-            opacity: entered ? 1 : 0,
-            transform: entered ? 'translateY(0)' : 'translateY(-20px)',
-            transition: 'opacity 0.8s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1)',
-          }}
-        >
-          <OverclockLogo variant="light" height={60} className="drop-shadow-lg" />
-        </div>
-
         {/* Tagline — clip reveal */}
         <h1
           className="font-display text-white uppercase leading-[0.95] tracking-[3px] max-w-4xl"

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X, Twitter, Instagram, Youtube, Twitch } from 'lucide-react'
-import { OverclockLogo } from '../base/OverclockLogo'
 import { NAV_LINKS, NAV_CTA, SOCIAL_LINKS } from '../../data/content'
+import { asset } from '../../utils/asset'
 
 const SOCIAL_ICONS: Record<string, React.ReactNode> = {
   twitter: <Twitter size={20} strokeWidth={1.5} />,
@@ -17,33 +17,25 @@ const SOCIAL_ICONS: Record<string, React.ReactNode> = {
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
-  const [dark, setDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY
-      setScrolled(y > 80)
-      // Switch dark once past VideoHero (~100vh)
-      setDark(y > window.innerHeight * 0.7)
-    }
+    const onScroll = () => setScrolled(window.scrollY > 80)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const navLinkColor = dark ? '#FFFFFF' : 'rgb(40,40,40)'
-  const navLinkHoverColor = dark ? '#FFFF00' : '#000000'
 
   return (
     <header
       ref={navRef}
       className="sticky top-0 z-[200]"
       style={{
-        background: dark ? '#000000' : '#FFFFFF',
-        borderBottom: dark ? '1px solid #41413B' : '1px solid #D2D5D9',
-        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.12)' : 'none',
-        transition: 'background 0.4s ease, border-color 0.4s ease, box-shadow 0.3s ease',
+        background: scrolled ? 'rgba(0,0,0,0.82)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(8px)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(8px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
+        transition: 'background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease',
       }}
     >
       <div className="oc-container">
@@ -51,9 +43,18 @@ export function Nav() {
           className="flex items-center justify-between py-3"
           aria-label="Navegação principal"
         >
-          {/* Logo */}
+          {/* Logo — always white (invert the dark emblem) */}
           <a href="#" aria-label="Overclock Esports — Página inicial">
-            <OverclockLogo variant={dark ? 'light' : 'dark'} height={44} />
+            <img
+              src={asset('/graphics/match-oc-logo-mini.png')}
+              alt="Overclock Esports"
+              style={{
+                height: '36px',
+                width: 'auto',
+                objectFit: 'contain',
+                filter: 'brightness(0) invert(1)',
+              }}
+            />
           </a>
 
           {/* Desktop links */}
@@ -63,12 +64,9 @@ export function Nav() {
                 <a
                   href={link.href}
                   className="font-heading text-[14px] no-underline"
-                  style={{
-                    color: navLinkColor,
-                    transition: 'color 0.25s ease',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.color = navLinkHoverColor)}
-                  onMouseLeave={e => (e.currentTarget.style.color = navLinkColor)}
+                  style={{ color: '#FFFFFF', transition: 'color 0.25s ease' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#FFFF00')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
                 >
                   {link.label}
                 </a>
@@ -83,12 +81,9 @@ export function Nav() {
                 key={social.platform}
                 href={social.href}
                 aria-label={social.ariaLabel}
-                style={{
-                  color: navLinkColor,
-                  transition: 'color 0.25s ease',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = navLinkHoverColor)}
-                onMouseLeave={e => (e.currentTarget.style.color = navLinkColor)}
+                style={{ color: '#FFFFFF', transition: 'color 0.25s ease' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#FFFF00')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
               >
                 {SOCIAL_ICONS[social.platform]}
               </a>
@@ -98,12 +93,12 @@ export function Nav() {
               href="#recruitment"
               className="nav-cta-btn inline-flex items-center gap-2 px-6 py-3 rounded-none font-ui text-[11px] font-medium tracking-[2px] uppercase border border-dashed"
               style={{
-                color: dark ? '#FFFF00' : '#000000',
-                borderColor: '#41413B',
+                color: '#FFFF00',
+                borderColor: 'rgba(255,255,0,0.4)',
                 background: 'transparent',
-                transition: 'background 0.25s ease, color 0.4s ease',
+                transition: 'background 0.25s ease',
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = dark ? 'rgba(255,255,0,0.1)' : 'rgba(0,0,0,0.06)')}
+              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = 'rgba(255,255,0,0.1)')}
               onMouseLeave={e => ((e.currentTarget as HTMLElement).style.background = 'transparent')}
             >
               {NAV_CTA}
@@ -112,8 +107,8 @@ export function Nav() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 transition-colors"
-            style={{ color: navLinkColor }}
+            className="lg:hidden p-2"
+            style={{ color: '#FFFFFF' }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={menuOpen}
@@ -122,7 +117,7 @@ export function Nav() {
           </button>
         </nav>
 
-        {/* Mobile menu — slide down */}
+        {/* Mobile menu */}
         <div
           className="lg:hidden overflow-hidden"
           style={{
@@ -131,32 +126,38 @@ export function Nav() {
             transition: 'max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease',
           }}
         >
-          <div style={{ borderTop: dark ? '1px solid #41413B' : '1px solid #D2D5D9', paddingBottom: '16px' }}>
+          <div
+            style={{
+              borderTop: '1px solid rgba(255,255,255,0.12)',
+              paddingBottom: '16px',
+              background: 'rgba(0,0,0,0.92)',
+            }}
+          >
             <ul className="flex flex-col gap-0 list-none" role="list">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block py-3 font-heading text-[14px] transition-colors"
-                    style={{ color: navLinkColor }}
+                    className="block py-3 font-heading text-[14px]"
+                    style={{ color: '#FFFFFF', transition: 'color 0.25s ease' }}
                     onClick={() => setMenuOpen(false)}
-                    onMouseEnter={e => (e.currentTarget.style.color = navLinkHoverColor)}
-                    onMouseLeave={e => (e.currentTarget.style.color = navLinkColor)}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#FFFF00')}
+                    onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="mt-3 pt-3 flex items-center gap-4" style={{ borderTop: dark ? '1px solid #41413B' : '1px solid #D2D5D9' }}>
+            <div className="mt-3 pt-3 flex items-center gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}>
               {SOCIAL_LINKS.slice(0, 4).map((social) => (
                 <a
                   key={social.platform}
                   href={social.href}
                   aria-label={social.ariaLabel}
-                  style={{ color: navLinkColor, transition: 'color 0.25s ease' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = navLinkHoverColor)}
-                  onMouseLeave={e => (e.currentTarget.style.color = navLinkColor)}
+                  style={{ color: '#FFFFFF', transition: 'color 0.25s ease' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#FFFF00')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#FFFFFF')}
                 >
                   {SOCIAL_ICONS[social.platform]}
                 </a>
@@ -164,9 +165,10 @@ export function Nav() {
             </div>
             <a
               href="#recruitment"
-              className="mt-4 flex items-center justify-center gap-2 py-3 font-ui text-[11px] font-medium tracking-[2px] uppercase border border-dashed border-[#41413B] w-full"
+              className="mt-4 flex items-center justify-center gap-2 py-3 font-ui text-[11px] font-medium tracking-[2px] uppercase border border-dashed w-full"
               style={{
-                color: dark ? '#FFFF00' : '#000000',
+                color: '#FFFF00',
+                borderColor: 'rgba(255,255,0,0.4)',
                 background: 'transparent',
               }}
               onClick={() => setMenuOpen(false)}
